@@ -1,0 +1,41 @@
+<!-- src/app/components/librocomponent/librocomponent.component.html -->
+
+<form (ngSubmit)="onSubmit()" #bookForm="ngForm">
+    <div>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" required [(ngModel)]="libro.nombre" name="nombre" />
+    </div>
+  
+    <div>
+      <label for="autor">Autor</label>
+      <input type="text" id="autor" required [(ngModel)]="libro.autor" name="autor" />
+    </div>
+  
+    <div>
+      <label for="fechaEscritura">Fecha de Escritura</label>
+      <input type="date" id="fechaEscritura" required [(ngModel)]="libro.fechaEscritura" name="fechaEscritura" />
+    </div>
+  
+    <div>
+      <label for="edicion">Edición</label>
+      <input type="number" id="edicion" required [(ngModel)]="libro.edicion" name="edicion" />
+    </div>
+  
+    <div>
+      <label for="precio">Precio</label>
+      <input type="number" step="0.01" id="precio" required [(ngModel)]="libro.precio" name="precio" />
+    </div>
+  
+    <div>
+      <label for="tipoLibro">Tipo de Libro</label>
+      <input type="text" id="tipoLibro" required [(ngModel)]="libro.tipoLibro" name="tipoLibro" />
+    </div>
+  
+    <div>
+      <label for="famaEscritor">Fama del Escritor</label>
+      <input type="text" id="famaEscritor" required [(ngModel)]="libro.famaEscritor" name="famaEscritor" />
+    </div>
+  
+    <button type="submit">Guardar Libro</button>
+  </form>
+  
